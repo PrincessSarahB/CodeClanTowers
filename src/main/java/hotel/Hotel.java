@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class Hotel {
 
     private ArrayList<ConferenceRoom> conferenceRooms;
-    private ArrayList<RoomType> rooms;
+    private ArrayList<Bedroom> rooms;
     private ArrayList<DiningRoom> diningrooms;
 
     public Hotel() {
@@ -23,11 +23,19 @@ public class Hotel {
         return conferenceRooms;
     }
 
-    public ArrayList<RoomType> getRooms() {
+    public ArrayList<Bedroom> getRooms() {
         return rooms;
     }
 
     public ArrayList<DiningRoom> getDiningrooms() {
         return diningrooms;
+    }
+
+    public void addRoom(Bedroom room){
+        this.rooms.add(room);
+    }
+
+    public int countBedrooms(){
+        return this.rooms.size();
     }
 }

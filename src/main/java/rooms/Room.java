@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public abstract class Room {
 
     public int capacity;
-    protected ArrayList<Guest> guest;
+    public ArrayList<Guest> guest;
 
     public Room (int capacity) {
         this.capacity = capacity;
