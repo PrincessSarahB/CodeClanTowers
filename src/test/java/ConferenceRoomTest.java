@@ -1,3 +1,4 @@
+import guests.Guest;
 import org.junit.Before;
 import org.junit.Test;
 import rooms.ConferenceRoom;
@@ -7,10 +8,12 @@ import static org.junit.Assert.assertEquals;
 public class ConferenceRoomTest {
 
     ConferenceRoom conference1;
+    Guest guest;
 
     @Before
     public void before(){
         conference1 = new ConferenceRoom(100, "Alpha", 300.00);
+        guest = new Guest("Jim Miller");
     }
 
     @Test
@@ -26,5 +29,12 @@ public class ConferenceRoomTest {
     @Test
     public void hasRate(){
         assertEquals(300.00, conference1.getRate(), 0.01);
+    }
+
+    @Test
+
+    public void canCheckInGuest(){
+        conference1.checkInGuest(guest);
+        assertEquals(1, conference1.numberOfGuestsInRoom());
     }
 }

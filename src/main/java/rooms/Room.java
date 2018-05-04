@@ -22,4 +22,14 @@ public abstract class Room {
     public ArrayList<Guest> getGuest() {
         return guest;
     }
+
+    public void checkInGuest(Guest guest){
+        this.guest.add(guest);
+    }
+
+    public int numberOfGuestsInRoom(){
+       return this.guest.size();
+    }
+
+
 }
