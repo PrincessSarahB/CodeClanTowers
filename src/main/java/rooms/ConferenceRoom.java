@@ -1,5 +1,7 @@
 package rooms;
 
+import java.util.ArrayList;
+
 public class ConferenceRoom extends Room {
 
     private String name;
@@ -9,6 +11,7 @@ public class ConferenceRoom extends Room {
         super(capacity);
         this.name = name;
         this.rate = rate;
+        this.guest = new ArrayList<>();
     }
 
     public String getName() {

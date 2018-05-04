@@ -34,7 +34,7 @@ public class ConferenceRoomTest {
     @Test
 
     public void canCheckInGuest(){
-        conference1.checkInGuest(guest);
+        conference1.addGuest(guest);
         assertEquals(1, conference1.numberOfGuestsInRoom());
     }
 }

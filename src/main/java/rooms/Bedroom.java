@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Bedroom extends Room {
 
-    private int roomNumber;
+    public int roomNumber;
     private RoomType type;
     private double rate;
 
@@ -27,4 +27,5 @@ public class Bedroom extends Room {
     public double getRate() {
         return rate;
     }
+
 }

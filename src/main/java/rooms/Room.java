@@ -23,8 +23,11 @@ public abstract class Room {
         return guest;
     }
 
-    public void checkInGuest(Guest guest){
+    public void addGuest(Guest guest){
+        int remainingCapacity = this.capacity - this.guest.size();
+        if(remainingCapacity > 0){
         this.guest.add(guest);
+        }
     }
 
     public int numberOfGuestsInRoom(){

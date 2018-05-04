@@ -1,5 +1,6 @@
 package hotel;
 
+import guests.Guest;
 import rooms.*;
 
 import java.util.ArrayList;
@@ -51,4 +52,9 @@ public class Hotel {
     public int countDiningRooms(){
         return this.diningRooms.size();
     }
-}
+
+    public void checkIn(Room room, Guest guest){
+            room.addGuest(guest);
+        }
+    }
+

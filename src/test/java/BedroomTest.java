@@ -44,7 +44,7 @@ public class BedroomTest {
     @Test
 
     public void canCheckInGuest(){
-        bedroom.checkInGuest(guest);
+        bedroom.addGuest(guest);
         assertEquals(1, bedroom.numberOfGuestsInRoom());
     }
 }
