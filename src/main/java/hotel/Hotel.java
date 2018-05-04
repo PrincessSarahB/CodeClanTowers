@@ -1,9 +1,6 @@
 package hotel;
 
-import rooms.Bedroom;
-import rooms.ConferenceRoom;
-import rooms.DiningRoom;
-import rooms.RoomType;
+import rooms.*;
 
 import java.util.ArrayList;
 
@@ -11,12 +8,12 @@ public class Hotel {
 
     private ArrayList<ConferenceRoom> conferenceRooms;
     private ArrayList<Bedroom> rooms;
-    private ArrayList<DiningRoom> diningrooms;
+    private ArrayList<DiningRoom> diningRooms;
 
     public Hotel() {
         this.conferenceRooms = new ArrayList<>();
         this.rooms = new ArrayList<>();
-        this.diningrooms = new ArrayList<>();
+        this.diningRooms = new ArrayList<>();
     }
 
     public ArrayList<ConferenceRoom> getConferenceRooms() {
@@ -28,14 +25,30 @@ public class Hotel {
     }
 
     public ArrayList<DiningRoom> getDiningrooms() {
-        return diningrooms;
+        return diningRooms;
     }
 
-    public void addRoom(Bedroom room){
-        this.rooms.add(room);
+    public void addBedroom(Bedroom bedroom){
+        this.rooms.add(bedroom);
     }
 
     public int countBedrooms(){
         return this.rooms.size();
+    }
+
+    public void addConferenceRoom(ConferenceRoom conferenceRoom){
+        this.conferenceRooms.add(conferenceRoom);
+    }
+
+    public int countConferenceRooms(){
+        return this.conferenceRooms.size();
+    }
+
+    public void addDiningRoom(DiningRoom diningRoom){
+        this.diningRooms.add(diningRoom);
+    }
+
+    public int countDiningRooms(){
+        return this.diningRooms.size();
     }
 }
