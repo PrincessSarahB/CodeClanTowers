@@ -16,5 +16,15 @@ public class Bedroom extends Room {
         this.guest = new ArrayList<>();
     }
 
+    public int getRoomNumber() {
+        return roomNumber;
+    }
 
+    public RoomType getType() {
+        return type;
+    }
+
+    public double getRate() {
+        return rate;
+    }
 }

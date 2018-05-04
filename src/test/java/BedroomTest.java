@@ -14,12 +14,27 @@ public class BedroomTest {
 
     public void before(){
 
-        bedroom = new Bedroom(RoomType.DOUBLE.getValue(), 1, 200.00, RoomType.DOUBLE);
+        bedroom = new Bedroom(RoomType.DOUBLE.getValue(), 123, 200.00, RoomType.DOUBLE);
     }
 
     @Test
 
-    public void roomhasCapacity(){
+    public void roomHasCapacity(){
         assertEquals(2, bedroom.getCapacity());
+    }
+
+    @Test
+    public void roomHasNumber(){
+        assertEquals(123, bedroom.getRoomNumber());
+    }
+
+    @Test
+    public void roomHasRate(){
+        assertEquals(200.00, bedroom.getRate(), 0.01);
+    }
+
+    @Test
+    public void roomHasType(){
+        assertEquals(RoomType.DOUBLE, bedroom.getType());
     }
 }
