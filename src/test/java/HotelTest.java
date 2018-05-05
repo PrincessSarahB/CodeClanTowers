@@ -89,10 +89,25 @@ public class HotelTest {
     }
 
     @Test
+    public void cannotCheckInConferenceRoomFull(){
+        for (int i = 0; i<21; i++){
+            hotel.checkIn(conferenceroom1, guest1);
+        }
+        assertEquals(20, conferenceroom1.numberOfGuestsInRoom());
+    }
 
+    @Test
     public void canCheckInDiningRoom(){
         hotel.checkIn(diningRoom, guest1);
         assertEquals(1, diningRoom.numberOfGuestsInRoom());
+    }
+
+    @Test
+    public void cannotCheckInDiningRoomFull(){
+        for (int i = 0; i<101; i++){
+            hotel.checkIn(diningRoom, guest1);
+        }
+        assertEquals(100, diningRoom.numberOfGuestsInRoom());
     }
 
 
