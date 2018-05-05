@@ -11,10 +11,12 @@ public class Hotel {
     private ArrayList<Bedroom> rooms;
     private ArrayList<DiningRoom> diningRooms;
 
+
     public Hotel() {
         this.conferenceRooms = new ArrayList<>();
         this.rooms = new ArrayList<>();
         this.diningRooms = new ArrayList<>();
+
     }
 
     public ArrayList<ConferenceRoom> getConferenceRooms() {
@@ -56,5 +58,27 @@ public class Hotel {
     public void checkIn(Room room, Guest guest){
             room.addGuest(guest);
         }
+
+    public void checkOut(Room room, Guest guest){
+        room.removeGuest(guest);
+    }
+
+    public ArrayList listGuestsInRoom(Room room) {
+      return room.getGuests();
+    }
+
+    public ArrayList listVacantRooms() {
+        ArrayList vacantRooms = new ArrayList<>();
+        for (Room room : this.rooms) {
+            if (room.guests.size() == 0) {
+                vacantRooms.add(room);
+            }
+        }
+        return vacantRooms;
+    }
+
+
+
+
     }
 

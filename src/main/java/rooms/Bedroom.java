@@ -13,7 +13,7 @@ public class Bedroom extends Room {
         this.roomNumber = roomNumber;
         this.rate = rate;
         this.type = roomType;
-        this.guest = new ArrayList<>();
+        this.guests = new ArrayList<>();
     }
 
     public int getRoomNumber() {

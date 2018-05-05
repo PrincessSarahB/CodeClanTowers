@@ -11,7 +11,7 @@ public class ConferenceRoom extends Room {
         super(capacity);
         this.name = name;
         this.rate = rate;
-        this.guest = new ArrayList<>();
+        this.guests = new ArrayList<>();
     }
 
     public String getName() {
