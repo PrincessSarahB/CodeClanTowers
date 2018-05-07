@@ -20,7 +20,8 @@ public abstract class Room {
     }
 
     public ArrayList<Guest> getGuests() {
-        return guests;
+        ArrayList<Guest> copy = new ArrayList<>(guests);
+        return copy;
     }
 
     public void addGuest(Guest guest){

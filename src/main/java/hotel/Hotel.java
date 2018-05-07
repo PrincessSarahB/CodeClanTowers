@@ -19,17 +19,6 @@ public class Hotel {
 
     }
 
-    public ArrayList<ConferenceRoom> getConferenceRooms() {
-        return conferenceRooms;
-    }
-
-    public ArrayList<Bedroom> getRooms() {
-        return rooms;
-    }
-
-    public ArrayList<DiningRoom> getDiningrooms() {
-        return diningRooms;
-    }
 
     public void addBedroom(Bedroom bedroom){
         this.rooms.add(bedroom);
